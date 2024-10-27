@@ -1,5 +1,8 @@
 package tarea6;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.Scanner;
 
@@ -7,9 +10,12 @@ public class GuardarAlumnos {
 
 	Alumno alumnos[] = new Alumno[1];
 	Scanner sc = new Scanner(System.in);
+	BufferedWriter bw = null;
 
 	public void guardarAlumnos() {
+
 		try {
+			bw = new BufferedWriter(new FileWriter(""));
 			for (int i = 0; i < alumnos.length; i++) {
 				System.out.println("Introduzca la Nia del alumno: ");
 				int nia = sc.nextInt();
@@ -41,8 +47,16 @@ public class GuardarAlumnos {
 
 				alumnos[i] = new Alumno(nia, nombre, apellidos, genero, nacimiento, ciclo, curso, grupo);
 			}
-		}catch(Exception e) {
+
+			AlumnosJUnitMain.main(null);
+		} catch (Exception e) {
 			e.printStackTrace();
+		} finally {
+			try {
+				bw.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 }
