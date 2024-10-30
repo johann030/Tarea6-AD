@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class MostrarAlumnos {
 
 	Scanner sc = new Scanner(System.in);
-	BufferedReader br = null;
+	BufferedReader br;
 	String lineas;
 	String leerFichero;
 

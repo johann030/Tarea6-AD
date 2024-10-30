@@ -8,9 +8,8 @@ import java.util.Scanner;
 public class GenerarFichero {
 
 	Scanner sc = new Scanner(System.in);
-	BufferedWriter bw = null;
+	BufferedWriter bw;
 	String fichero;
-	AlumnosJUnitMain AJU = new AlumnosJUnitMain();
 
 	public void fichero() {
 

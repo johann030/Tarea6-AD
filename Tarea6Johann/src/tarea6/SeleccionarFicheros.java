@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class SeleccionarFicheros {
 
 	Scanner sc = new Scanner(System.in);
-	BufferedWriter bw = null;
+	BufferedWriter bw;
 	String fichero;
 
 	public void elegirFichero() {

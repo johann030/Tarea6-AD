@@ -10,7 +10,7 @@ public class GuardarAlumnos {
 
 	Alumno alumnos[] = new Alumno[1];
 	Scanner sc = new Scanner(System.in);
-	BufferedWriter bw = null;
+	BufferedWriter bw;
 
 	public void guardarAlumnos() {
 
